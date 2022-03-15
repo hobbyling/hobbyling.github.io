@@ -257,7 +257,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #5ac5c1 0%, #65A19F 100%);
     opacity: 0.8;
 }
 
@@ -387,11 +387,11 @@ header .side-nav .social-link {
 }
 
 .cover-btns a:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
+    border: 1px solid #FE7247;
+    background-color: #FE7247;
+    box-shadow: 0 14px 26px -12px rgba(233, 147, 30, 0.42),
     0 4px 23px 0 rgba(0, 0, 0, 0.12),
-    0 8px 10px -5px rgba(233, 30, 99, 0.2);
+    0 8px 10px -5px rgba(233, 147, 30, 0.42);
 }
 
 .cover-btns a i {
@@ -551,8 +551,12 @@ header .go-back i {
 }
 
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    /* -webkit-animation: rainbow 60s infinite;
+    animation: rainbow 60s infinite; */
+    background: rgba(132, 13, 121, 0.2);
+    background: linear-gradient(45deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
+    background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
 }
 
 .bg-cover:before,
@@ -1834,7 +1838,6 @@ footer {
 }
 
 footer .social-statis {
-    margin-top: 10px;
     position: relative;
 }
 
@@ -1843,7 +1846,7 @@ footer a {
 }
 
 footer .copy-right {
-    color: #dbdbdb;
+    color: #fff;
 }
 
 /*搜索层样式*/
@@ -1903,7 +1906,7 @@ footer .copy-right {
 }
 
 .top-scroll .btn-floating {
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%);
+    background: linear-gradient(to bottom right, #fa9576 0%, #FE7247 100%);
     width: 48px;
     height: 48px;
 }
@@ -2023,6 +2026,11 @@ footer .copy-right {
 }
 
 /*二级菜单*/
+
+nav ul a:hover {
+    background-color: transparent !important;
+    color: #FE7247;
+}
 
 .nav-menu {
 }
