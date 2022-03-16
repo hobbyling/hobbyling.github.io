@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="陣列批次操作, Hobby&#39;s Note">
+    <meta name="keywords" content="作品集 - GoldenF 官方網站, Hobby&#39;s Note">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>陣列批次操作 | Hobby&#39;s Note</title>
+    <title>作品集 - GoldenF 官方網站 | Hobby&#39;s Note</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -205,12 +205,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGNvbG9yfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://i.ibb.co/KhvdrMV/bg.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">陣列批次操作</h1>
+                    <h1 class="description center-align post-title">作品集 - GoldenF 官方網站</h1>
                 </div>
             </div>
         </div>
@@ -326,12 +326,16 @@
                     
                     <div class="article-tag">
                         
+                            <a href="/tags/Portfolio/">
+                                <span class="chip bg-color">Portfolio</span>
+                            </a>
+                        
                             <a href="/tags/JavaScript/">
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/Array/">
-                                <span class="chip bg-color">Array</span>
+                            <a href="/tags/Vue2/">
+                                <span class="chip bg-color">Vue2</span>
                             </a>
                         
                     </div>
@@ -342,8 +346,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaScript/" class="post-category">
-                                JavaScript
+                            <a href="/categories/Portfolio/" class="post-category">
+                                Portfolio
                             </a>
                         
                     </div>
@@ -355,7 +359,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>發布日期:&nbsp;&nbsp;
-                    2022-03-15
+                    2022-03-16
                 </div>
                 
 
@@ -379,153 +383,78 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Array-forEach"><a href="#Array-forEach" class="headerlink" title="Array.forEach()"></a>Array.forEach()</h2><blockquote>
-<p>對每個元素執行動作</p>
-</blockquote>
-<p>將陣列元素一個一個抓出來，帶入函數執行。陣列元素如果是物件可變更，不會產生新陣列</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">let</span> books <span class="token operator">=</span> <span class="token punctuation">[</span>
-  <span class="token punctuation">{</span> <span class="token literal-property property">discount</span><span class="token operator">:</span> <span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">200</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span> <span class="token literal-property property">discount</span><span class="token operator">:</span> <span class="token number">0.8</span><span class="token punctuation">,</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">100</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token punctuation">{</span> <span class="token literal-property property">discount</span><span class="token operator">:</span> <span class="token number">0.7</span><span class="token punctuation">,</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">600</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-books<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">book</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  book<span class="token punctuation">.</span>total <span class="token operator">=</span> book<span class="token punctuation">.</span>discount <span class="token operator">*</span> book<span class="token punctuation">.</span>price<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>books<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-[
-  { discount: 0.9, price: 200, total: 180 },
-  { discount: 0.8, price: 100, total: 80},
-  { discount: 0.7, price: 600, total: 420},
-]
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h2 id="herb-專案簡介"><a href="#herb-專案簡介" class="headerlink" title=":herb: 專案簡介"></a><font color="#ee6e73"><span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 專案簡介</font></h2><p>公司的第一版官方網站，目的為讓業務在外可以向客戶展示產品以及服務項目</p>
 <hr>
-<h2 id="Array-map"><a href="#Array-map" class="headerlink" title="Array.map()"></a>Array.map()</h2><blockquote>
-<p>執行結果存到新陣列</p>
-</blockquote>
-<p>將陣列元素一個一個抓出來，將執行結果存成另一個陣列</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-new_array <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> num <span class="token operator">*</span> num<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>new_array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-[1,4,9,16,25]
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<h2 id="herb-功能簡介"><a href="#herb-功能簡介" class="headerlink" title=" :herb: 功能簡介"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 功能簡介</font></h2><h5 id="RWD-響應式設計"><a href="#RWD-響應式設計" class="headerlink" title="RWD 響應式設計"></a>RWD 響應式設計</h5><ul>
+<li>因應使用者在外展示時，使用裝置多以手機為主，因此實作 RWD 以完善手機 UI 的呈現</li>
+</ul>
+<h5 id="寄信功能"><a href="#寄信功能" class="headerlink" title="寄信功能"></a>寄信功能</h5><ul>
+<li>聯絡我：使用 PHP 實作 Email 寄信功能，並串接 google 機器人驗證，避免被惡意連續寄信攻擊</li>
+</ul>
+<h5 id="語系切換"><a href="#語系切換" class="headerlink" title="語系切換"></a>語系切換</h5><ul>
+<li>可切換簡體中文、繁體中文及英文語系</li>
+</ul>
 <hr>
-<h2 id="Array-filter"><a href="#Array-filter" class="headerlink" title="Array.filter()"></a>Array.filter()</h2><blockquote>
-<p>留下符合條件的元素</p>
-</blockquote>
-<p>根據函數回傳值（true/false），決定要不要把元素複製到新陣列</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-new_array <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">num</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> num <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>new_array<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-1
-2
-3
-4
-5
-[4,5]
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="Array-find"><a href="#Array-find" class="headerlink" title="Array.find()"></a>Array.find()</h2><blockquote>
-<p>找到第一個符合條件的元素</p>
-</blockquote>
-<p>根據函數回傳值（true/false），傳回第一個符合條件的元素（非陣列），不會遍尋所有值</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">dnas <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"ATC"</span><span class="token punctuation">,</span> <span class="token string">"AGC"</span><span class="token punctuation">,</span> <span class="token string">"TTG"</span><span class="token punctuation">,</span> <span class="token string">"AAA"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-find_tg <span class="token operator">=</span> dnas<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dna</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> dna<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">"TG"</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>find_tg<span class="token punctuation">,</span> <span class="token keyword">typeof</span> find_tg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-ATC
-AGC
-TTG
-TTG, string
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="Array-some"><a href="#Array-some" class="headerlink" title="Array.some()"></a>Array.some()</h2><blockquote>
-<p>判斷有元素符合條件</p>
-</blockquote>
-<p>其中有元素符合條件回傳 true，遇到符合條件的元素就會停止，不會遍尋所有值</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-find_tg <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dna</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> dna <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>find_tg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-1
-2
-6
-true
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="Array-every"><a href="#Array-every" class="headerlink" title="Array.every()"></a>Array.every()</h2><blockquote>
-<p>判斷所有元素都符合條件</p>
-</blockquote>
-<p>每一個元素都符合條件回傳 true，遇到不符合條件的元素就會停止，不會遍尋所有值</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-find_tg <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dna</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dna<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> dna <span class="token operator">&gt;</span> <span class="token number">3</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>find_tg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-1
-false
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="Array-sort"><a href="#Array-sort" class="headerlink" title="Array.sort()"></a>Array.sort()</h2><blockquote>
-<p>根據大小排列陣列</p>
-</blockquote>
-<p>根據函數回傳值排列陣列</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-[3, 4, 6, 9]
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="Array-reduce-函數-初始值"><a href="#Array-reduce-函數-初始值" class="headerlink" title="Array.reduce(函數, 初始值)"></a>Array.reduce(函數, 初始值)</h2><blockquote>
-<p>根據規則縮減陣列</p>
-</blockquote>
-<p>根據取出每個值與暫存做運算，回傳結果<br>Eg. 把書籍價錢加到暫存裡 -&gt; 總價</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">books <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">10</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">20</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">price</span><span class="token operator">:</span> <span class="token number">30</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token keyword">let</span> total <span class="token operator">=</span> books<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">total<span class="token punctuation">,</span> a</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> total <span class="token operator">+</span> a<span class="token punctuation">.</span>price<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">/* ======= result ======= 
-60
-=======================*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="herb-框架與套件"><a href="#herb-框架與套件" class="headerlink" title=" :herb: 框架與套件"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 框架與套件</font></h2><h5 id="JavaScript-框架"><a href="#JavaScript-框架" class="headerlink" title="JavaScript 框架"></a>JavaScript 框架</h5><ul>
+<li>Vue2</li>
+</ul>
+<h5 id="CSS-框架"><a href="#CSS-框架" class="headerlink" title="CSS 框架"></a>CSS 框架</h5><ul>
+<li>Bootstrap</li>
+</ul>
+<h5 id="套件"><a href="#套件" class="headerlink" title="套件"></a>套件</h5><table>
+<thead>
+<tr>
+<th>套件名稱</th>
+<th>說明</th>
+<th>參考文件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>node-sass</td>
+<td>將.scss 檔案轉換成 css</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/sass/node-sass">Github</a></td>
+</tr>
+<tr>
+<td>vue-awesome-swiper</td>
+<td>輪播圖效果</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/surmon-china/vue-awesome-swiper">Github</a></td>
+</tr>
+<tr>
+<td>vue-backtotop</td>
+<td>滾動至頂部</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/caiofsouza/vue-backtotop">Github</a></td>
+</tr>
+<tr>
+<td>vue-recaptcha</td>
+<td>Google 機器人驗證</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/DanSnow/vue-recaptcha">Github</a></td>
+</tr>
+<tr>
+<td>vue-typer</td>
+<td>打字機效果</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cngu/vue-typer">Github</a></td>
+</tr>
+<tr>
+<td>vue-wow</td>
+<td>捲動動畫效果</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Estelle00/vue-wow">Github</a></td>
+</tr>
+<tr>
+<td>vue-axios</td>
+<td>非同步工具</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/imcvampire/vue-axios">Github</a></td>
+</tr>
+<tr>
+<td>vue-meta</td>
+<td>Head 標籤管理</td>
+<td><a target="_blank" rel="noopener" href="https://vue-meta.nuxtjs.org/">官方網站</a></td>
+</tr>
+<tr>
+<td>qs</td>
+<td>增加安全性的查詢字串解析和序列化字串的庫</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/ljharb/qs">Github</a></td>
+</tr>
+</tbody></table>
 
                 
             </div>
@@ -552,7 +481,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hobbyling.github.io/2022/03/15/zhen-lie-pi-ci-cao-zuo/">https://hobbyling.github.io/2022/03/15/zhen-lie-pi-ci-cao-zuo/</a>
+                    <a href="https://hobbyling.github.io/2022/03/16/zuo-pin-ji-goldenf-guan-fang-wang-zhan/">https://hobbyling.github.io/2022/03/16/zuo-pin-ji-goldenf-guan-fang-wang-zhan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -590,12 +519,16 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     
                         <div class="article-tag">
                             
+                                <a href="/tags/Portfolio/">
+                                    <span class="chip bg-color">Portfolio</span>
+                                </a>
+                            
                                 <a href="/tags/JavaScript/">
                                     <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
-                                <a href="/tags/Array/">
-                                    <span class="chip bg-color">Array</span>
+                                <a href="/tags/Vue2/">
+                                    <span class="chip bg-color">Vue2</span>
                                 </a>
                             
                         </div>
@@ -636,9 +569,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/03/16/zuo-pin-ji-goldenf-guan-fang-wang-zhan/">
                     <div class="card-image">
@@ -655,9 +589,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -670,6 +604,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -693,7 +628,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/03/15/zhen-lie-pi-ci-cao-zuo/">
@@ -726,7 +661,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

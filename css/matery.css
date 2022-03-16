@@ -2146,3 +2146,8 @@ nav ul a:hover {
     padding: 0;
     margin: 0;
 }
+
+
+.modal {
+    border-radius: 10px !important;
+}
