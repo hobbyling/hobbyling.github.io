@@ -108,3 +108,16 @@ deploy:
   type: git
   repo: git@github.com:hobbyling/hobbyling.github.io.git
   branch: master
+
+# 搜尋功能
+search:
+  path: search.xml
+  field: post
+
+# Emoji
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
