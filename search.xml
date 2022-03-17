@@ -4,35 +4,6 @@
   
     
     <entry>
-      <title>作品集 - GoldenF 官方網站</title>
-      <link href="/2022/03/16/zuo-pin-ji-goldenf-guan-fang-wang-zhan/"/>
-      <url>/2022/03/16/zuo-pin-ji-goldenf-guan-fang-wang-zhan/</url>
-      
-        <content type="html"><![CDATA[<h2 id="herb-專案簡介"><a href="#herb-專案簡介" class="headerlink" title=":herb: 專案簡介"></a><font color="#ee6e73"><span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 專案簡介</font></h2><p>公司的第一版官方網站，目的為讓業務在外可以向客戶展示產品以及服務項目</p><hr><h2 id="herb-功能簡介"><a href="#herb-功能簡介" class="headerlink" title=" :herb: 功能簡介"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 功能簡介</font></h2><h5 id="RWD-響應式設計"><a href="#RWD-響應式設計" class="headerlink" title="RWD 響應式設計"></a>RWD 響應式設計</h5><ul><li>因應使用者在外展示時，使用裝置多以手機為主，因此實作 RWD 以完善手機 UI 的呈現</li></ul><h5 id="寄信功能"><a href="#寄信功能" class="headerlink" title="寄信功能"></a>寄信功能</h5><ul><li>聯絡我：使用 PHP 實作 Email 寄信功能，並串接 google 機器人驗證，避免被惡意連續寄信攻擊</li></ul><h5 id="語系切換"><a href="#語系切換" class="headerlink" title="語系切換"></a>語系切換</h5><ul><li>可切換簡體中文、繁體中文及英文語系</li></ul><hr><h2 id="herb-框架與套件"><a href="#herb-框架與套件" class="headerlink" title=" :herb: 框架與套件"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 框架與套件</font></h2><h5 id="JavaScript-框架"><a href="#JavaScript-框架" class="headerlink" title="JavaScript 框架"></a>JavaScript 框架</h5><ul><li>Vue2</li></ul><h5 id="CSS-框架"><a href="#CSS-框架" class="headerlink" title="CSS 框架"></a>CSS 框架</h5><ul><li>Bootstrap</li></ul><h5 id="套件"><a href="#套件" class="headerlink" title="套件"></a>套件</h5><table><thead><tr><th>套件名稱</th><th>說明</th><th>參考文件</th></tr></thead><tbody><tr><td>node-sass</td><td>將.scss 檔案轉換成 css</td><td><a href="https://github.com/sass/node-sass">Github</a></td></tr><tr><td>vue-awesome-swiper</td><td>輪播圖效果</td><td><a href="https://github.com/surmon-china/vue-awesome-swiper">Github</a></td></tr><tr><td>vue-backtotop</td><td>滾動至頂部</td><td><a href="https://github.com/caiofsouza/vue-backtotop">Github</a></td></tr><tr><td>vue-recaptcha</td><td>Google 機器人驗證</td><td><a href="https://github.com/DanSnow/vue-recaptcha">Github</a></td></tr><tr><td>vue-typer</td><td>打字機效果</td><td><a href="https://github.com/cngu/vue-typer">Github</a></td></tr><tr><td>vue-wow</td><td>捲動動畫效果</td><td><a href="https://github.com/Estelle00/vue-wow">Github</a></td></tr><tr><td>vue-axios</td><td>非同步工具</td><td><a href="https://github.com/imcvampire/vue-axios">Github</a></td></tr><tr><td>vue-meta</td><td>Head 標籤管理</td><td><a href="https://vue-meta.nuxtjs.org/">官方網站</a></td></tr><tr><td>qs</td><td>增加安全性的查詢字串解析和序列化字串的庫</td><td><a href="https://github.com/ljharb/qs">Github</a></td></tr></tbody></table>]]></content>
-      
-      
-      <categories>
-          
-          <category> Portfolio </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Portfolio </tag>
-            
-            <tag> JavaScript </tag>
-            
-            <tag> Vue2 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>陣列批次操作</title>
       <link href="/2022/03/15/zhen-lie-pi-ci-cao-zuo/"/>
       <url>/2022/03/15/zhen-lie-pi-ci-cao-zuo/</url>
