@@ -42,7 +42,7 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -121,3 +121,10 @@ githubEmojis:
   inject: true
   styles:
   customEmojis:
+
+# 修改文件並保存後，網頁自動更新
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+  instanceName: "uniqueString"
