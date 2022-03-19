@@ -553,10 +553,10 @@ header .go-back i {
 .bg-cover:after {
     /* -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite; */
-    background: rgba(132, 13, 121, 0.2);
-    background: linear-gradient(45deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
-    background: -moz-linear-gradient(135deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
-    background: -webkit-linear-gradient(135deg, rgba(132, 13, 121, 0.2) 0%, rgba(132, 13, 121, 0.1) 100%);
+    background: rgb(253 222 250 / 20%);
+    background: linear-gradient(45deg, rgb(253 222 250 / 20%) 0%, rgb(92 84 92 / 10%) 100%);
+    background: -moz-linear-gradient(135deg, rgb(253 222 250 / 20%) 0%, rgb(92 84 92 / 10%) 100%);
+    background: -webkit-linear-gradient(135deg, rgb(253 222 250 / 20%) 0%, rgb(92 84 92 / 10%) 100%);
 }
 
 .bg-cover:before,
@@ -2150,4 +2150,27 @@ nav ul a:hover {
 
 .modal {
     border-radius: 10px !important;
+}
+
+table {
+    /* border-collapse: collapse;
+    box-shadow: 20px 20px 20px 5px #a7bad3;
+    background-color: white;
+    text-align: left; */
+}
+
+#articleContent table th {
+    background-color: #afded8;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#articleContent table td {
+    padding: 1rem 2rem;
+    border: 0;
+    min-width: 0;
 }
