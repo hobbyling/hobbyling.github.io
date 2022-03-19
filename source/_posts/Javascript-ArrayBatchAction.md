@@ -2,11 +2,11 @@
 title: 陣列批次操作
 date: 2022-03-15 23:47:07
 author: Hobby Lee
-img: https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGNvbG9yfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+img: ./assets/Javascript-ArrayBatchAction/cover.jpg
 top: true
 hide: false
 cover: true
-coverImg: https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTF8fGNvbG9yfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60
+coverImg: ./assets/Javascript-ArrayBatchAction/cover.jpg
 summary: 陣列的各種批次操作
 categories: JavaScript
 tags:
@@ -201,3 +201,7 @@ console.log(total);
 60
 =======================*/
 ```
+
+---
+
+Cover: Photo by Kelli Tungay on [Unsplash](https://unsplash.com/photos/2LJ4rqK2qfU)
