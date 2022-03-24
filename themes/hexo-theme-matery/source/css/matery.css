@@ -585,17 +585,21 @@ header .go-back i {
 }
 
 .bg-cover .description {
-    background: hsla(0,0%,100%,.3);  
-    position: relative;
-    overflow: hidden;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.4em;
+    color: #fff;
+}
+
+.bg-cover .cover-description {
+    background: hsla(0,0%,100%,.3);  
+    position: relative;
+    overflow: hidden;
     color: #6a6a6a;
     box-shadow: 0 0 15px 0 rgb(255 255 255 / 50%), inset 0 0 15px 0 rgb(214 214 214 / 0%);
 }
 
-.bg-cover .description::before {
+.bg-cover .cover-description::before {
     content: '';
     position: absolute;
     top:0; right:0; bottom:0; left:0;
