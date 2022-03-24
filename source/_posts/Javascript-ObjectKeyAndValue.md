@@ -173,4 +173,4 @@ name Custom
 
 ---
 
-cover: Photo by Keila Hötzel on [Unsplashn](https://unsplash.com/photos/2VyyvZns3qQ)
+cover: Photo by Cristina Graf Adamoli on [Unsplashn](https://unsplash.com/photos/ELM74Lhmyfo)
