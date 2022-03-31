@@ -15,7 +15,6 @@ categories: Portfolio
 date: 2022-03-16 23:11:24
 ---
 
-
 ## <font color=#ee6e73>:herb: 官網連結</font>
 
 - [GoldenF 官方網站](http://goldenf.co/)
@@ -93,3 +92,4 @@ date: 2022-03-16 23:11:24
 利用在 Sketch 繪製的 Mockup，與主管討論 UI 呈現及色彩規劃，在來回修正後，最終定案並進行實作。而隨著 Figma 興起，為了方便團隊共同編輯，則逐步把檔案轉放到 Figma 平台上。
 
 [![](./assets/Portfolio-GoldenFOfficialWebsite/cover.png)](https://www.figma.com/file/svcaTP8OdJ9ProkS2O3kPc/GF_official_website?node-id=0%3A1)
+[前往 Figma](https://www.figma.com/file/svcaTP8OdJ9ProkS2O3kPc/GF_official_website?node-id=0%3A1)
