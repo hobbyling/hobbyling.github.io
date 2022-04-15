@@ -1,23 +1,29 @@
 ---
 title: 作品集 - GoldenF 官方網站
-date: 2022-03-16 23:11:24
-author: Hobby Lee
-img: Portfolio-GoldenFOfficialWebsite/bg.jpeg
-top: true
-hide: false
-cover: true
-coverImg: Portfolio-GoldenFOfficialWebsite/bg.jpeg
-summary: 進公司的第一個作品
-categories: Portfolio
 tags:
   - Portfolio
   - JavaScript
   - Vue2
+author: Hobby Lee
+img: ./assets/Portfolio-GoldenFOfficialWebsite/bg.jpeg
+top: true
+hide: false
+cover: true
+coverImg: ./assets/Portfolio-GoldenFOfficialWebsite/bg.jpeg
+summary: 進公司的第一個作品
+categories: Portfolio
+date: 2022-03-16 23:11:24
+---
+
+## <font color=#ee6e73>:herb: 官網連結</font>
+
+- [GoldenF 官方網站](http://goldenf.co/)
+
 ---
 
 ## <font color=#ee6e73>:herb: 專案簡介</font>
 
-公司的第一版官方網站，目的為讓業務在外可以向客戶展示產品以及服務項目
+這個專案是我進公司後第一個負責的專案，也是公司的第一個官方網站，主要訴求是可以讓業務在外向客戶展示產品以及服務項目
 
 ---
 
@@ -38,15 +44,6 @@ tags:
 ##### API 串接
 
 - 試玩遊戲部分與後端配合，串接 API 資料並於 UI 呈現
-
----
-
-## <font color=#ee6e73> :herb: 歷經重構</font>
-
-身為公司唯一的前端，在接收到任務時，只想著用最快、最拿手的工具去完成專案
-因此在實作此專案的第一阪本時，使用的是單純的 HTML, css 及 JavaScrip
-隨著前端框架的興起，試著瞭解並學習後，公司決定以 Vue 作為未來前端專案的主要框架
-而為了方便專案管理，統一所有專案使用框架，因此將此專案架構轉換為 Vue 架構
 
 ---
 
@@ -76,12 +73,23 @@ tags:
 
 ---
 
+## <font color=#ee6e73> :herb: 歷經重構</font>
+
+身為公司唯一的前端，在接收到任務時，只想著用最快、最熟悉的工具去完成專案。因此在實作此專案的第一版本時，使用的是單純的 HTML, Css 及 JavaScrip。
+
+隨著前端框架的興起，嘗試瞭解並學習後，公司決定以 Vue 作為未來前端專案的主要框架。而為了方便專案管理，統一所有專案使用框架，因此對官網重構，將架構轉換為 Vue。
+
+第一次使用 Vue 完成一個專案，一邊在網路上尋找教學一邊實作在專案中，遇到問題時也只能靠自己尋找答案，看到專案能夠正式上線，雖然過程中覺得辛苦，但這些都累積成了經驗，讓我在執行接下來的專案時，能夠更得心應手。
+
+---
+
 ## <font color=#ee6e73> :herb: UI 設計</font>
 
-由於這時期的公司屬於新創階段，並沒有 UI 設計師的職位專門設計版面，因此從整體架構、 UI 版面、色系規劃，都是由我主導並實作
-藉由 Sketch 繪製草稿，並與主管討論 UI 呈現及色彩規劃，來回修正後定案並進行實作
-隨著 Figma 興起，並把檔案轉放到 Figma
+由於公司屬於新創階段，並沒有 UI 設計師的職位專門設計版面，因此從整體架構、 UI 版面、色系規劃，都是由一人主導並實作。
 
-[Figma 連結](https://www.figma.com/file/svcaTP8OdJ9ProkS2O3kPc/GF_official_website?node-id=0%3A1)
+選擇 <font color=#EBC55D>#EBC55D</font> 作為主色，除了是呼應「Golden」，也意涵著與我們合作，將會帶來財富。
 
-![Banner](/source/assets/Portfolio-GoldenFOfficialWebsite/bg.jpeg)
+利用在 Sketch 繪製的 Mockup，與主管討論 UI 呈現及色彩規劃，在來回修正後，最終定案並進行實作。而隨著 Figma 興起，為了方便團隊共同編輯，則逐步把檔案轉放到 Figma 平台上。
+
+[![](./assets/Portfolio-GoldenFOfficialWebsite/cover.png)](https://www.figma.com/file/svcaTP8OdJ9ProkS2O3kPc/GF_official_website?node-id=0%3A1)
+[前往 Figma](https://www.figma.com/file/svcaTP8OdJ9ProkS2O3kPc/GF_official_website?node-id=0%3A1)
