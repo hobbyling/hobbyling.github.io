@@ -128,3 +128,11 @@ browsersync:
   ghostMode:
     scroll: true
   instanceName: "uniqueString"
+
+# 數學公式
+math:
+  engine: "mathjax" # or 'katex'
+  mathjax:
+    src: custom_mathjax_source
+    config:
+      # MathJax config

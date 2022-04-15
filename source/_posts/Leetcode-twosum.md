@@ -13,7 +13,7 @@ tags:
   - JavaScript
   - Array
   - Object
-  - Leet Code
+  - LeetCode
 ---
 
 ## <font color=#ee6e73> :herb: 難度：Easy </font>
