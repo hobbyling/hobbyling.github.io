@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode- Palinderome Number, Hobby&#39;s Note">
+    <meta name="keywords" content="Call By Value &amp; Call By Reference, Hobby&#39;s Note">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Leetcode- Palinderome Number | Hobby&#39;s Note</title>
+    <title>Call By Value &amp; Call By Reference | Hobby&#39;s Note</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -207,12 +207,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Leetcode-PalinderomeNumber/cover.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Javascript-CallByValueOrReference/cover.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description cover-description center-align post-title">Leetcode- Palinderome Number</h1>
+                    <h1 class="description cover-description center-align post-title">Call By Value &amp; Call By Reference</h1>
                 </div>
             </div>
         </div>
@@ -332,12 +332,12 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/Number/">
-                                <span class="chip bg-color">Number</span>
+                            <a href="/tags/CallByValue/">
+                                <span class="chip bg-color">CallByValue</span>
                             </a>
                         
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
+                            <a href="/tags/CallByReference/">
+                                <span class="chip bg-color">CallByReference</span>
                             </a>
                         
                     </div>
@@ -348,8 +348,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/LeetCode/" class="post-category">
-                                LeetCode
+                            <a href="/categories/JavaScript/" class="post-category">
+                                JavaScript
                             </a>
                         
                     </div>
@@ -361,7 +361,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>發布日期:&nbsp;&nbsp;
-                    2022-04-15
+                    2022-04-21
                 </div>
                 
 
@@ -385,170 +385,147 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="herb-難度：Easy"><a href="#herb-難度：Easy" class="headerlink" title=" :herb: 難度：Easy "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 難度：Easy </font></h2><hr>
-<h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>給定一個整數 x，如果 x 是迴文數，則返回 true。</p>
-<blockquote>
-<p>Given an integer x, return true if x is palindrome integer.</p>
+                <p>在 JavaScript 中，值的傳遞分為</p>
+<ul>
+<li>Call By Value（傳值），或稱 Pass by value</li>
+<li>Call By Reference（傳參考、傳址），或稱 Pass by reference</li>
+</ul>
+<p>要使用哪種方式傳遞，是根據值的型別來決定的</p>
+<h2 id="herb-值的型別"><a href="#herb-值的型別" class="headerlink" title=" :herb: 值的型別"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 值的型別</font></h2><p>可分成</p>
+<h3 id="Primitive-values（基本型別）"><a href="#Primitive-values（基本型別）" class="headerlink" title="Primitive values（基本型別）"></a>Primitive values（基本型別）</h3><blockquote>
+<p><strong>這一類的型別傳遞方式為 Call by Value</strong></p>
 </blockquote>
-<p>迴文數的定義為：從前面讀和從後面讀是一樣的，是一個「對稱」的數<br>例如，121 是一個迴文數，而 123 不是</p>
-<blockquote>
-<p>An integer is a palindrome when it reads the same backward as forward.<br>For example, 121 is a palindrome while 123 is not.</p>
+<p>被定義為基本型別，包含</p>
+<ul>
+<li>Boolean：布林</li>
+<li>Null：空值</li>
+<li>Undefinded：未定義</li>
+<li>Number：數字</li>
+<li>BigInt：數字，支援比 Number 更大範圍的整數值</li>
+<li>String：字串</li>
+<li>Symbol：符號，ES6 新定義</li>
+</ul>
+<p>可參考 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Data_structures#%E8%B3%87%E6%96%99%E5%9E%8B%E5%88%A5">JavaScript 的資料型別與資料結構</a></p>
+<h3 id="Object（物件型別）"><a href="#Object（物件型別）" class="headerlink" title="Object（物件型別）"></a>Object（物件型別）</h3><blockquote>
+<p><strong>傳遞方式為 Call by Reference</strong></p>
 </blockquote>
-<p>限制：$-2^{31}$ &lt;= x &lt;= $2^{31}$ - 1</p>
-<blockquote>
-<p>Constraints: $-2^{31}$ &lt;= x &lt;= $2^{31}$ - 1</p>
-</blockquote>
-<p>更近一步：是否能在不將數字轉成字串的方式下解決問題呢？</p>
-<blockquote>
-<p>Follow up: Could you solve it without converting the integer to a string?</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">Example 1
-Input: x = 121
-Output: true
+<p>除了被定義為基本型別外的其他型別，都屬於物件型別，包含</p>
+<ul>
+<li>Object：物件</li>
+<li>Array：陣列</li>
+<li>Function: 函式</li>
+</ul>
+<hr>
+<h2 id="herb-Call-By-Value"><a href="#herb-Call-By-Value" class="headerlink" title=" :herb: Call By Value"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Call By Value</font></h2><p><strong>複製的是「值」</strong></p>
+<ul>
+<li>當 c = a 時，是將 a 的值複製了一份，再放入新的，且獨立的記憶體空間中給 c</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-解釋：從左邊往右邊讀，和從右邊往左邊讀，都是 121
-Explanation: 121 reads as 121 from left to right and from right to left.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/../assets/Javascript-CallByValueOrReference/pic1.jpg" alt="將 a 的值複製了一份，再放入新的記憶體空間中給 c"></p>
+<hr>
+<ul>
+<li>當 a 產生變化時，是不會連動影響到 c 的</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> c <span class="token operator">=</span> a<span class="token punctuation">;</span>
 
-<pre class="line-numbers language-none"><code class="language-none">Example 2
-Input: x = -121
-Output: false
+a<span class="token operator">++</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-解釋：從左邊往右邊讀是 -121，從右邊往左邊讀是 121-，所以不是迴文數
-Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="/../assets/Javascript-CallByValueOrReference/pic2.jpg" alt="當 a 產生變化時，不會連動影響到 c"></p>
+<hr>
+<ul>
+<li>這邊的比較，是比較 a 和 b 的值，因此會回傳 true</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">10</span>
 
-<pre class="line-numbers language-none"><code class="language-none">Example 3
-Input: x = 10
-Output: false
-
-解釋：從左邊往右邊讀是 10，從右邊往左邊讀是 01，所以不是迴文數
-Explanation: Reads 01 from right to left. Therefore it is not a palindrome.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token comment">// true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h2 id="herb-初次解題"><a href="#herb-初次解題" class="headerlink" title=" :herb: 初次解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 初次解題</font></h2><ul>
-<li>Runtime : 167 ms</li>
-<li>Memory : 51.6 MB</li>
-</ul>
-<p>第一次解題時，沒有注意到不要轉換成字串的提示，就滿心歡喜地轉換並解出答案。<br>先將數字拆解成陣列後，再進行比較</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 將字串分解成陣列</span>
-  <span class="token keyword">const</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// 如果陣列第一個值是 '-'，則返回 false</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">"-"</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-
-  <span class="token comment">// 依序判斷前後值，若不相等，則返回 false</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> arr<span class="token punctuation">[</span>len <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>轉換成字串的情況下，也可以直接反轉字串做比較</p>
+<h2 id="herb-Call-By-Reference"><a href="#herb-Call-By-Reference" class="headerlink" title=" :herb: Call By Reference"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Call By Reference</font></h2><p><strong>複製會讓變數指向同樣的「記憶體位置」</strong></p>
 <ul>
-<li>Runtime : 195 ms</li>
-<li>Memory : 51.6 MB</li>
+<li>當 b = a 時，是將 b 指向原本 a 記憶體位置</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> x <span class="token operator">==</span> x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Hobby"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">"female"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="/../assets/Javascript-CallByValueOrReference/pic3.jpg" alt="a 和 b 指向的記憶體位置相同"></p>
+<hr>
+<ul>
+<li>當 a 改變時，b 也會連帶影響，因為是指向同樣的位置</li>
+</ul>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Hobby"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">"female"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+a<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"Aaron"</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
+<span class="token comment">/*
+{
+  name: "Aaron",
+  gender: "female"
+}
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h2 id="herb-不使用字串"><a href="#herb-不使用字串" class="headerlink" title=" :herb: 不使用字串"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 不使用字串</font></h2><ul>
-<li>Runtime : 904 ms</li>
-<li>Memory : 57.8 MB</li>
-</ul>
-<p>了解其他進階解法，是用取餘數和整數的方式處理。</p>
 <ul>
-<li>%：回傳剩下的餘數，ex 15 % 10 = 5</li>
-<li>Math.floor(): 回傳小於等於所給數字的最大整數，ex Math.floor(5.09) =&gt; 5</li>
+<li>當比較 a 和 b 時，比較的是「記憶體位置」，因此回傳 true</li>
 </ul>
-<p>先判斷數字：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Hobby"</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">gender</span><span class="token operator">:</span> <span class="token string">"female"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">--</span><span class="token operator">--</span>
+<span class="token comment">// true</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<hr>
 <ul>
-<li>負數：一定不是迴文數</li>
-<li>個位數：一定是迴文數</li>
+<li>當 a 和 b 寫入同樣的內容，但因為記憶體位置不同，若互相比較，回傳的會是 false</li>
 </ul>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 若為負數，則返回 false</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Hobby"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token comment">// 若為個位數，則返回 true</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Hobby"</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-  <span class="token comment">// 算出 x 是幾位數</span>
-  <span class="token keyword">let</span> digits <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">/</span> digits <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    digits <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">--</span><span class="token operator">--</span>
+<span class="token comment">// false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 取第一個數字</span>
-    <span class="token keyword">let</span> first <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>x <span class="token operator">/</span> digits<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 取最後一個數字</span>
-    <span class="token keyword">let</span> last <span class="token operator">=</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>first <span class="token operator">!==</span> last<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 去除頭尾後繼續比對</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"x:"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"x % digits:"</span><span class="token punctuation">,</span> x <span class="token operator">%</span> digits<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"(x % digits) / 10:"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
-      <span class="token string">"Math.floor((x % digits) / 10))"</span><span class="token punctuation">,</span>
-      Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    x <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 因為比完頭尾所以少了兩位數 / 100</span>
-    digits <span class="token operator">=</span> digits <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>console.log 回傳結果測試</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token number">121</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">121</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">21</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">2.1</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">2</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">0</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">0</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">0</span>
-
-<span class="token operator">--</span><span class="token operator">-</span>
-<span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token number">123141</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">123141</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">23141</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">2314.1</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">2314</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p><img src="/../assets/Javascript-CallByValueOrReference/pic4.jpg" alt="a 和 b 的記憶體位置不同，因此 a === b 會回傳 false"></p>
 <hr>
 <h2 id="herb-參考資料"><a href="#herb-參考資料" class="headerlink" title=" :herb: 參考資料"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 參考資料</font></h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/palindrome-number/">LeetCode-Palindrome Number</a></li>
-<li><a target="_blank" rel="noopener" href="https://hannahpun.gitbook.io/leetcode-note/math/9-palindrome-number">LeetCode Note</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.techbridge.cc/2018/06/23/javascript-call-by-value-or-reference/">深入探討 JavaScript 中的參數傳遞：call by value 還是 reference？</a></li>
+<li><a target="_blank" rel="noopener" href="https://pjchender.blogspot.com/2016/03/javascriptby-referenceby-value.html">[筆記] 談談 JavaScript 中 by reference 和 by value 的重要觀念</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/@sunnyhuang.sc/%E6%8A%80%E8%A1%93%E7%AD%86%E8%A8%98-javascript-%E5%82%B3%E5%80%BC-by-value-%E5%82%B3%E5%9D%80-by-reference-%E5%B7%AE%E7%95%B0-db3124ddd691">[ 技術筆記 ] JavaScript ｜傳值（by Value） / 傳址（by Reference）差異</a></li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/itsems-frontend/javascript-pass-by-value-reference-sharing-5d6095ae030b">[JavaScript] Javascript 中的傳值 by value 與傳址 by reference</a></li>
+<li><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10241346">JavaScript 基本功修練：Day6 - 傳址、傳值</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Data_structures#objects">JavaScript 的資料型別與資料結構</a></li>
 </ul>
 <hr>
-<p>cover: Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@sarahdorweiler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sarah Dorweiler</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/flower?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p>Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@evieshaffer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Evie S.</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/plant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 
                 
             </div>
@@ -575,7 +552,7 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hobbyling.github.io/2022/04/15/leetcode-palinderomenumber/">https://hobbyling.github.io/2022/04/15/leetcode-palinderomenumber/</a>
+                    <a href="https://hobbyling.github.io/2022/04/21/javascript-callbyvalueorreference/">https://hobbyling.github.io/2022/04/21/javascript-callbyvalueorreference/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -617,12 +594,12 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                                     <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
-                                <a href="/tags/Number/">
-                                    <span class="chip bg-color">Number</span>
+                                <a href="/tags/CallByValue/">
+                                    <span class="chip bg-color">CallByValue</span>
                                 </a>
                             
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
+                                <a href="/tags/CallByReference/">
+                                    <span class="chip bg-color">CallByReference</span>
                                 </a>
                             
                         </div>
@@ -663,9 +640,10 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/04/21/javascript-callbyvalueorreference/">
                     <div class="card-image">
@@ -682,9 +660,9 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -697,6 +675,7 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -723,23 +702,23 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/03/leetcode-twosum/">
+                <a href="/2022/04/15/leetcode-palinderomenumber/">
                     <div class="card-image">
                         
-                        <img src="/./assets/Leetcode-twosum/cover.jpg" class="responsive-img" alt="LeetCode - Two sum">
+                        <img src="/./assets/Leetcode-PalinderomeNumber/cover.jpg" class="responsive-img" alt="Leetcode- Palinderome Number">
                         
-                        <span class="card-title">LeetCode - Two sum</span>
+                        <span class="card-title">Leetcode- Palinderome Number</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LeetCode 練習 - Two sum
+                            LeetCode 練習 - Palinderome Number
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
                             </span>
                         <span class="publish-author">
                             
@@ -760,12 +739,8 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/Array/">
-                        <span class="chip bg-color">Array</span>
-                    </a>
-                    
-                    <a href="/tags/Object/">
-                        <span class="chip bg-color">Object</span>
+                    <a href="/tags/Number/">
+                        <span class="chip bg-color">Number</span>
                     </a>
                     
                     <a href="/tags/LeetCode/">
@@ -900,13 +875,6 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 
 
