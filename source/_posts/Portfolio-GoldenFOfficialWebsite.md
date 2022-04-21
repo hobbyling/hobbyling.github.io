@@ -6,9 +6,9 @@ tags:
   - Vue2
 author: Hobby Lee
 img: ./assets/Portfolio-GoldenFOfficialWebsite/bg.jpeg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Portfolio-GoldenFOfficialWebsite/bg.jpeg
 summary: 進公司的第一個作品
 categories: Portfolio

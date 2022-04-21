@@ -3,9 +3,9 @@ title: LeetCode - Two sum
 date: 2022-04-03 16:16:03
 author: Hobby Lee
 img: ./assets/Leetcode-twosum/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Leetcode-twosum/cover.jpg
 summary: LeetCode 練習 - Two sum
 categories: LeetCode

@@ -3,9 +3,9 @@ title: 陣列批次操作
 date: 2022-03-15 23:47:07
 author: Hobby Lee
 img: ./assets/Javascript-ArrayBatchAction/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascript-ArrayBatchAction/cover.jpg
 summary: 陣列的各種批次操作
 categories: JavaScript
