@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Leetcode-Guess Number Higher Or Lower</title>
+      <link href="/2022/06/13/leetcode-guessnumberhigherorlower/"/>
+      <url>/2022/06/13/leetcode-guessnumberhigherorlower/</url>
+      
+        <content type="html"><![CDATA[<h2 id="herb-難度：Easy"><a href="#herb-難度：Easy" class="headerlink" title=" :herb: 難度：Easy "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 難度：Easy </font></h2><hr><h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>我們正在玩猜數字遊戲，規則如下:</p><blockquote><p>We are playing the Guess Game. The game is as follows:</p></blockquote><p>我在 1 到 n 中選定一個數字，你必須猜中我所指定的數字。<br>每當你猜錯時，我將告訴你，你猜的數字比指定數字高還是低。</p><blockquote><p>I pick a number from 1 to n. You have to guess which number I picked.<br>Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.</p></blockquote><p>你將呼叫一個預定義的整數猜測 API（整數），此 API 會回傳三種結果</p><ul><li>-1: 你猜的數字高於指定數字</li><li>1: 你猜的數字低於指定數字</li><li>0: 你猜的數字等於指定數字</li></ul><blockquote><p>You call a pre-defined API int guess(int num), which returns three possible results:<br>-1: Your guess is higher than the number I picked (i.e. num &gt; pick).<br>1: Your guess is lower than the number I picked (i.e. num &lt; pick).<br>0: your guess is equal to the number I picked (i.e. num == pick).</p></blockquote><p>最後回傳指定數字</p><blockquote><p>Return the number that I picked.</p></blockquote><p>限制：</p><ul><li>1 &lt;= n &lt;= $2^{31}$ - 1</li><li>1 &lt;= pick &lt;= n</li></ul><blockquote><p>Constraints:<br>1 &lt;= n &lt;= $2^{31}$ - 1<br>1 &lt;= pick &lt;= n</p></blockquote><pre class="line-numbers language-none"><code class="language-none">Example 1:Input: n = 10, pick = 6Output: 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">Example 2:Input: n = 1, pick = 1Output: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-none"><code class="language-none">Example 3:Input: n = 2, pick = 1Output: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="herb-解題"><a href="#herb-解題" class="headerlink" title=" :herb: 解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 解題</font></h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**  * Forward declaration of guess API. * @param {number} num   your guess * @return      -1 if num is higher than the picked number *      1 if num is lower than the picked number *               otherwise return 0 * var guess = function(num) {} */</span><span class="token comment">/** * @param {number} n * @return {number} */</span><span class="token keyword">var</span> <span class="token function-variable function">guessNumber</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    <span class="token keyword">let</span> start <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>    <span class="token keyword">let</span> end <span class="token operator">=</span> n<span class="token punctuation">;</span>        <span class="token keyword">while</span><span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token keyword">let</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>            <span class="token keyword">return</span> mid        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            start <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span>        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>            end <span class="token operator">=</span> mid<span class="token operator">-</span><span class="token number">1</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><hr><h2 id="herb-參考資料"><a href="#herb-參考資料" class="headerlink" title=" :herb: 參考資料"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 參考資料</font></h2><ul><li><a href="https://leetcode.com/problems/guess-number-higher-or-lower/">LeetCode - 374. Guess Number Higher or Lower</a></li></ul><hr><p>cover: Photo by <a href="https://unsplash.com/photos/8ioenvmof-I">Jazmin Quaynor</a> on <a href="https://unsplash.com/s/photos/flower?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> LeetCode </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Binary Search </tag>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vite+Vue3 中管理 Svg Icon</title>
       <link href="/2022/06/10/vue-svgsprites/"/>
       <url>/2022/06/10/vue-svgsprites/</url>
@@ -109,9 +138,9 @@
             
             <tag> JavaScript </tag>
             
-            <tag> Number </tag>
-            
             <tag> LeetCode </tag>
+            
+            <tag> Number </tag>
             
         </tags>
       

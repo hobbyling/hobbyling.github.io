@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="LeetCode - Two sum, Hobby&#39;s Note">
+    <meta name="keywords" content="Leetcode-Guess Number Higher Or Lower, Hobby&#39;s Note">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>LeetCode - Two sum | Hobby&#39;s Note</title>
+    <title>Leetcode-Guess Number Higher Or Lower | Hobby&#39;s Note</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -207,12 +207,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Leetcode-twosum/cover.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Leetcode-GuessNumberHigherOrLower/cover.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description cover-description center-align post-title">LeetCode - Two sum</h1>
+                    <h1 class="description cover-description center-align post-title">Leetcode-Guess Number Higher Or Lower</h1>
                 </div>
             </div>
         </div>
@@ -332,12 +332,8 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/Array/">
-                                <span class="chip bg-color">Array</span>
-                            </a>
-                        
-                            <a href="/tags/Object/">
-                                <span class="chip bg-color">Object</span>
+                            <a href="/tags/Binary-Search/">
+                                <span class="chip bg-color">Binary Search</span>
                             </a>
                         
                             <a href="/tags/LeetCode/">
@@ -365,7 +361,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>發布日期:&nbsp;&nbsp;
-                    2022-04-03
+                    2022-06-13
                 </div>
                 
 
@@ -390,141 +386,86 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="herb-難度：Easy"><a href="#herb-難度：Easy" class="headerlink" title=" :herb: 難度：Easy "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 難度：Easy </font></h2><hr>
-<h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>給定一組擁有整數數字的陣列 (nums) 以及一個整數目標值 (target)，陣列中有兩個元素加起來會等於目標值 (target)，需將這兩個元素的索引值 (indices)，以陣列方式回傳</p>
+<h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>我們正在玩猜數字遊戲，規則如下:</p>
 <blockquote>
-<p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+<p>We are playing the Guess Game. The game is as follows:</p>
 </blockquote>
-<p>相同的元素不能重複使用，如 Example 3 的第一個 3 不能重複使用</p>
+<p>我在 1 到 n 中選定一個數字，你必須猜中我所指定的數字。<br>每當你猜錯時，我將告訴你，你猜的數字比指定數字高還是低。</p>
 <blockquote>
-<p>You may assume that each input would have exactly one solution, and you may not use the same element twice.</p>
+<p>I pick a number from 1 to n. You have to guess which number I picked.<br>Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.</p>
 </blockquote>
-<p>回傳的陣列值順序可任意排序</p>
-<blockquote>
-<p>You can return the answer in any order.</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">Example 1
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">Example2
-Input: nums = [3,2,4], target = 6
-Output: [1,2]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-none"><code class="language-none">Example3
-Input: nums = [3,3], target = 6
-Output: [0,1]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="herb-初次解題"><a href="#herb-初次解題" class="headerlink" title=" :herb: 初次解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 初次解題</font></h2><ul>
-<li>Runtime : 7652 ms</li>
-<li>Memory : 64.4 MB</li>
+<p>你將呼叫一個預定義的整數猜測 API（整數），此 API 會回傳三種結果</p>
+<ul>
+<li>-1: 你猜的數字高於指定數字</li>
+<li>1: 你猜的數字低於指定數字</li>
+<li>0: 你猜的數字等於指定數字</li>
 </ul>
-<p>第一次解題，花了一個小時左右才完成。用了兩個 find，中間跑迴圈時會有點搞不清楚現在跑到哪個值。不斷地用 console 確認後才終於解答。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
- */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 第一個索引值</span>
-  <span class="token keyword">let</span> first <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// 第二個索引值</span>
-  <span class="token keyword">let</span> second <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
-
-  nums<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 將 nums 參考被到 temp</span>
-    <span class="token keyword">let</span> temp <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 計算 target 和 item 的差異</span>
-    <span class="token keyword">let</span> diff <span class="token operator">=</span> target <span class="token operator">-</span> item<span class="token punctuation">;</span>
-
-    <span class="token comment">// 將 key 值寫入第一個索引值</span>
-    first <span class="token operator">=</span> key<span class="token punctuation">;</span>
-
-    <span class="token comment">// temp 陣列中，將當前元素值用 'x' 代替，避免重複使用元素</span>
-    temp<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"x"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 在 temp 裡尋找與 diff 相等的元素，並將索引值寫入 second</span>
-    temp<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">j<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">===</span> diff<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        second <span class="token operator">=</span> index<span class="token punctuation">;</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> second<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">return</span> <span class="token punctuation">[</span>first<span class="token punctuation">,</span> second<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<hr>
-<h2 id="herb-進階解法"><a href="#herb-進階解法" class="headerlink" title=" :herb: 進階解法"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 進階解法</font></h2><ul>
-<li>Runtime : 77 ms</li>
-<li>Memory : 42.4 MB</li>
+<blockquote>
+<p>You call a pre-defined API int guess(int num), which returns three possible results:<br>-1: Your guess is higher than the number I picked (i.e. num &gt; pick).<br>1: Your guess is lower than the number I picked (i.e. num &lt; pick).<br>0: your guess is equal to the number I picked (i.e. num == pick).</p>
+</blockquote>
+<p>最後回傳指定數字</p>
+<blockquote>
+<p>Return the number that I picked.</p>
+</blockquote>
+<p>限制：</p>
+<ul>
+<li>1 &lt;= n &lt;= $2^{31}$ - 1</li>
+<li>1 &lt;= pick &lt;= n</li>
 </ul>
-<p>了解其他進階解法，發現用物件 (object) 解題的方法。一開始不太理解，也是嘗試印出 console 驗證，才逐步了解其中的邏輯。</p>
-<p>利用物件沒有對應 key 值會回傳 <font color="#FF0000"><strong>undefined</strong></font> 的特性，來判斷如果回傳 undefined，則將原本 nums 的元素當作 key，對應的索引值當作 value 寫入 map。在下一次的迴圈中再繼續判斷，直到有對應的 key 時才回傳陣列。</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+<blockquote>
+<p>Constraints:<br>1 &lt;= n &lt;= $2^{31}$ - 1<br>1 &lt;= pick &lt;= n</p>
+</blockquote>
+<pre class="line-numbers language-none"><code class="language-none">Example 1:
+
+Input: n = 10, pick = 6
+Output: 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">Example 2:
+
+Input: n = 1, pick = 1
+Output: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-none"><code class="language-none">Example 3:
+
+Input: n = 2, pick = 1
+Output: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="herb-解題"><a href="#herb-解題" class="headerlink" title=" :herb: 解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 解題</font></h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/** 
+ * Forward declaration of guess API.
+ * @param {number} num   your guess
+ * @return 	     -1 if num is higher than the picked number
+ *			      1 if num is lower than the picked number
+ *               otherwise return 0
+ * var guess = function(num) {}
  */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">twoSum</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">var</span> map <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> nums<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">var</span> v <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"map:"</span><span class="token punctuation">,</span> map<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"map[target - v]:"</span><span class="token punctuation">,</span> map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">return</span> <span class="token punctuation">[</span>map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-      map<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+<span class="token comment">/**
+ * @param {number} n
+ * @return {number}
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">guessNumber</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> start <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> end <span class="token operator">=</span> n<span class="token punctuation">;</span>
+    
+    <span class="token keyword">while</span><span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> mid
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">guess</span><span class="token punctuation">(</span>mid<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            start <span class="token operator">=</span> mid<span class="token operator">+</span><span class="token number">1</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            end <span class="token operator">=</span> mid<span class="token operator">-</span><span class="token number">1</span>
+        <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>console.log 回傳結果測試</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">nums</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token number">9</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">undefined</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'2'</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">0</span>
-
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-<span class="token literal-property property">nums</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token number">6</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">undefined</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'3'</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">undefined</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'2'</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string-property property">'3'</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">1</span>
-
-<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span>
-<span class="token literal-property property">nums</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token literal-property property">target</span><span class="token operator">:</span> <span class="token number">6</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">undefined</span>
-
-<span class="token literal-property property">map</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token string-property property">'3'</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span>
-map<span class="token punctuation">[</span>target <span class="token operator">-</span> v<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">0</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h2 id="herb-參考資料"><a href="#herb-參考資料" class="headerlink" title=" :herb: 參考資料"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 參考資料</font></h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problemset/all/">LeetCode-Two sum</a></li>
-<li><a target="_blank" rel="noopener" href="https://skyyen999.gitbooks.io/-leetcode-with-javascript/content/questions/1md.html">LeetCode with Javascript</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/guess-number-higher-or-lower/">LeetCode - 374. Guess Number Higher or Lower</a></li>
 </ul>
 <hr>
-<p>cover: Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@twinsfisch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Isabella and Zsa Fischer</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/simple?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p>cover: Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/photos/8ioenvmof-I">Jazmin Quaynor</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/flower?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 
                 
             </div>
@@ -551,7 +492,7 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hobbyling.github.io/2022/04/03/leetcode-twosum/">https://hobbyling.github.io/2022/04/03/leetcode-twosum/</a>
+                    <a href="https://hobbyling.github.io/2022/06/13/leetcode-guessnumberhigherorlower/">https://hobbyling.github.io/2022/06/13/leetcode-guessnumberhigherorlower/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -593,12 +534,8 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                                     <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
-                                <a href="/tags/Array/">
-                                    <span class="chip bg-color">Array</span>
-                                </a>
-                            
-                                <a href="/tags/Object/">
-                                    <span class="chip bg-color">Object</span>
+                                <a href="/tags/Binary-Search/">
+                                    <span class="chip bg-color">Binary Search</span>
                                 </a>
                             
                                 <a href="/tags/LeetCode/">
@@ -643,28 +580,29 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/15/leetcode-palinderomenumber/">
+                <a href="/2022/06/13/leetcode-guessnumberhigherorlower/">
                     <div class="card-image">
                         
-                        <img src="/./assets/Leetcode-PalinderomeNumber/cover.jpg" class="responsive-img" alt="Leetcode- Palinderome Number">
+                        <img src="/./assets/Leetcode-GuessNumberHigherOrLower/cover.jpg" class="responsive-img" alt="Leetcode-Guess Number Higher Or Lower">
                         
-                        <span class="card-title">Leetcode- Palinderome Number</span>
+                        <span class="card-title">Leetcode-Guess Number Higher Or Lower</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LeetCode 練習 - Palinderome Number
+                            LeetCode 練習 - Guess Number Higher Or Lower
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -677,6 +615,7 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -684,12 +623,12 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
+                    <a href="/tags/Binary-Search/">
+                        <span class="chip bg-color">Binary Search</span>
                     </a>
                     
-                    <a href="/tags/Number/">
-                        <span class="chip bg-color">Number</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
                     </a>
                     
                 </div>
@@ -703,23 +642,23 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/03/24/javascript-objectkeyandvalue/">
+                <a href="/2022/06/10/vue-svgsprites/">
                     <div class="card-image">
                         
-                        <img src="/./assets/Javascript-ObjectKeyAndValue/cover.jpg" class="responsive-img" alt="取得物件的 key / value 值">
+                        <img src="/./assets/Vue-SvgSprites/cover.jpg" class="responsive-img" alt="Vite+Vue3 中管理 Svg Icon">
                         
-                        <span class="card-title">取得物件的 key / value 值</span>
+                        <span class="card-title">Vite+Vue3 中管理 Svg Icon</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            取得物件的 key 或者 value 值
+                            在 Vite + Vue3 中使用 svg-sprite-loader 管理 svg icon
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-10
                             </span>
                         <span class="publish-author">
                             
@@ -736,12 +675,16 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/Vite/">
+                        <span class="chip bg-color">Vite</span>
                     </a>
                     
-                    <a href="/tags/Object/">
-                        <span class="chip bg-color">Object</span>
+                    <a href="/tags/Vue3/">
+                        <span class="chip bg-color">Vue3</span>
+                    </a>
+                    
+                    <a href="/tags/svg/">
+                        <span class="chip bg-color">svg</span>
                     </a>
                     
                 </div>
@@ -872,6 +815,13 @@ map<span class="token punctuation">[</span>target <span class="token operator">-
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
