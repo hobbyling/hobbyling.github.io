@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Leetcode- Palinderome Number, Hobby&#39;s Note">
+    <meta name="keywords" content="LeetCode - Search Insert Position, Hobby&#39;s Note">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Leetcode- Palinderome Number | Hobby&#39;s Note</title>
+    <title>LeetCode - Search Insert Position | Hobby&#39;s Note</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/medias/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -207,12 +207,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Leetcode-PalinderomeNumber/cover.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/./assets/Leetcode-SearchInsertPosition/cover.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description cover-description center-align post-title">Leetcode- Palinderome Number</h1>
+                    <h1 class="description cover-description center-align post-title">LeetCode - Search Insert Position</h1>
                 </div>
             </div>
         </div>
@@ -332,12 +332,16 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/Number/">
-                                <span class="chip bg-color">Number</span>
+                            <a href="/tags/Array/">
+                                <span class="chip bg-color">Array</span>
                             </a>
                         
                             <a href="/tags/LeetCode/">
                                 <span class="chip bg-color">LeetCode</span>
+                            </a>
+                        
+                            <a href="/tags/Binary-Search/">
+                                <span class="chip bg-color">Binary Search</span>
                             </a>
                         
                     </div>
@@ -361,7 +365,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>發布日期:&nbsp;&nbsp;
-                    2022-04-15
+                    2022-06-14
                 </div>
                 
 
@@ -386,169 +390,100 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="herb-難度：Easy"><a href="#herb-難度：Easy" class="headerlink" title=" :herb: 難度：Easy "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 難度：Easy </font></h2><hr>
-<h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>給定一個整數 x，如果 x 是迴文數，則返回 true。</p>
+<h2 id="herb-題目"><a href="#herb-題目" class="headerlink" title=" :herb: 題目 "></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 題目 </font></h2><p>給定一組由不同整數組成的陣列以及一個目標值，若在陣列內找到目標值，則返回索引。若在陣列內找不到目標值，則返回該目標值插入陣列並排序後的索引。</p>
 <blockquote>
-<p>Given an integer x, return true if x is palindrome integer.</p>
+<p>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</p>
 </blockquote>
-<p>迴文數的定義為：從前面讀和從後面讀是一樣的，是一個「對稱」的數<br>例如，121 是一個迴文數，而 123 不是</p>
+<p>您必須編寫一個具有 O(log n) 運行時復雜度的算法。</p>
 <blockquote>
-<p>An integer is a palindrome when it reads the same backward as forward.<br>For example, 121 is a palindrome while 123 is not.</p>
+<p>You must write an algorithm with O(log n) runtime complexity.</p>
 </blockquote>
-<p>限制：$-2^{31}$ &lt;= x &lt;= $2^{31}$ - 1</p>
-<blockquote>
-<p>Constraints: $-2^{31}$ &lt;= x &lt;= $2^{31}$ - 1</p>
+<p>限制</p>
+<ul>
+<li>1 &lt;= 陣列長度 &lt;= $10^{4}$</li>
+<li>-$10^{4}$ &lt;= 陣列內的單一值 &lt;= $10^{4}$</li>
+<li>陣列內包含按照升序排序的不同值</li>
+<li>-$10^{4}$ &lt;= 目標值 &lt;= $10^{4}$<blockquote>
+<p>Constraints:<br>1 &lt;= nums.length &lt;= $10^{4}$<br>-$10^{4}$ &lt;= nums[i] &lt;= $10^{4}$<br>nums contains distinct values sorted in ascending order.<br>-$10^{4}$ &lt;= target &lt;= $10^{4}$</p>
 </blockquote>
-<p>更近一步：是否能在不將數字轉成字串的方式下解決問題呢？</p>
-<blockquote>
-<p>Follow up: Could you solve it without converting the integer to a string?</p>
-</blockquote>
-<pre class="line-numbers language-none"><code class="language-none">Example 1
-Input: x = 121
-Output: true
+</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">Example 1:
 
-解釋：從左邊往右邊讀，和從右邊往左邊讀，都是 121
-Explanation: 121 reads as 121 from left to right and from right to left.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Input: nums = [1,3,5,6], target = 5
+Output: 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">Example 2
-Input: x = -121
-Output: false
+<pre class="line-numbers language-none"><code class="language-none">Example 2:
 
-解釋：從左邊往右邊讀是 -121，從右邊往左邊讀是 121-，所以不是迴文數
-Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Input: nums = [1,3,5,6], target = 2
+Output: 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-none"><code class="language-none">Example 3
-Input: x = 10
-Output: false
+<pre class="line-numbers language-none"><code class="language-none">Example 3:
 
-解釋：從左邊往右邊讀是 10，從右邊往左邊讀是 01，所以不是迴文數
-Explanation: Reads 01 from right to left. Therefore it is not a palindrome.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Input: nums = [1,3,5,6], target = 7
+Output: 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h2 id="herb-初次解題"><a href="#herb-初次解題" class="headerlink" title=" :herb: 初次解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 初次解題</font></h2><ul>
-<li>Runtime : 167 ms</li>
-<li>Memory : 51.6 MB</li>
+<h2 id="herb-解題"><a href="#herb-解題" class="headerlink" title=" :herb: 解題"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 解題</font></h2><h3 id="解法：Array"><a href="#解法：Array" class="headerlink" title="解法：Array"></a>解法：Array</h3><ul>
+<li>Runtime : 62 ms</li>
+<li>Memory : 41.8 MB</li>
 </ul>
-<p>第一次解題時，沒有注意到不要轉換成字串的提示，就滿心歡喜地轉換並解出答案。<br>先將數字拆解成陣列後，再進行比較</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
- */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 將字串分解成陣列</span>
-  <span class="token keyword">const</span> arr <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// 如果陣列第一個值是 '-'，則返回 false</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">"-"</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">const</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-
-  <span class="token comment">// 依序判斷前後值，若不相等，則返回 false</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!==</span> arr<span class="token punctuation">[</span>len <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>轉換成字串的情況下，也可以直接反轉字串做比較</p>
+<p>使用 indexOf 尋找 target 是否存在 nums 內，</p>
 <ul>
-<li>Runtime : 195 ms</li>
-<li>Memory : 51.6 MB</li>
+<li>若有，則回傳索引</li>
+<li>若沒有，則把 target push 入 nums，排序的值後再用 indexOf 找出索引</li>
 </ul>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
  */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> x <span class="token operator">==</span> x<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">var</span> <span class="token function-variable function">searchInsert</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>法
+    <span class="token keyword">let</span> idx <span class="token operator">=</span> nums<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>idx <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        nums<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+        nums<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> a<span class="token operator">-</span>b<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> nums<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> idx
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<hr>
-<h2 id="herb-不使用字串"><a href="#herb-不使用字串" class="headerlink" title=" :herb: 不使用字串"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 不使用字串</font></h2><ul>
-<li>Runtime : 904 ms</li>
-<li>Memory : 57.8 MB</li>
-</ul>
-<p>了解其他進階解法，是用取餘數和整數的方式處理。</p>
-<ul>
-<li>%：回傳剩下的餘數，ex 15 % 10 = 5</li>
-<li>Math.floor(): 回傳小於等於所給數字的最大整數，ex Math.floor(5.09) =&gt; 5</li>
-</ul>
-<p>先判斷數字：</p>
-<ul>
-<li>負數：一定不是迴文數</li>
-<li>個位數：一定是迴文數</li>
+<h3 id="解法：Binary-search"><a href="#解法：Binary-search" class="headerlink" title="解法：Binary search"></a>解法：Binary search</h3><ul>
+<li>Runtime : 97 ms</li>
+<li>Memory : 42.4 MB</li>
 </ul>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
- * @param {number} x
- * @return {boolean}
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
  */</span>
-<span class="token keyword">var</span> <span class="token function-variable function">isPalindrome</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">x</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 若為負數，則返回 false</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// 若為個位數，則返回 true</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-
-  <span class="token comment">// 算出 x 是幾位數</span>
-  <span class="token keyword">let</span> digits <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">/</span> digits <span class="token operator">&gt;=</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    digits <span class="token operator">*=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-  <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 取第一個數字</span>
-    <span class="token keyword">let</span> first <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>x <span class="token operator">/</span> digits<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 取最後一個數字</span>
-    <span class="token keyword">let</span> last <span class="token operator">=</span> x <span class="token operator">%</span> <span class="token number">10</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>first <span class="token operator">!==</span> last<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 去除頭尾後繼續比對</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"x:"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"x % digits:"</span><span class="token punctuation">,</span> x <span class="token operator">%</span> digits<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"(x % digits) / 10:"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
-      <span class="token string">"Math.floor((x % digits) / 10))"</span><span class="token punctuation">,</span>
-      Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span>
-    <span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    x <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// 因為比完頭尾所以少了兩位數 / 100</span>
-    digits <span class="token operator">=</span> digits <span class="token operator">/</span> <span class="token number">100</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-  <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>console.log 回傳結果測試</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token number">121</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">121</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">21</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">2.1</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">2</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">2</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">0</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">0</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">0</span>
-
-<span class="token operator">--</span><span class="token operator">-</span>
-<span class="token literal-property property">input</span><span class="token operator">:</span> <span class="token number">123141</span>
-
-<span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">123141</span>
-x <span class="token operator">%</span> digits<span class="token operator">:</span> <span class="token number">23141</span>
-<span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token operator">:</span> <span class="token number">2314.1</span>
-Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x <span class="token operator">%</span> digits<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token number">2314</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">var</span> <span class="token function-variable function">searchInsert</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums<span class="token punctuation">,</span> target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> start <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">let</span> end <span class="token operator">=</span> nums<span class="token punctuation">.</span>length <span class="token operator">-</span><span class="token number">1</span>
+    
+    <span class="token keyword">while</span><span class="token punctuation">(</span>start <span class="token operator">&lt;=</span> end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> mid <span class="token operator">=</span> start <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>end<span class="token operator">-</span>start<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>
+        
+        <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">===</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> mid
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&gt;</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            end <span class="token operator">=</span> mid <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            start <span class="token operator">=</span> mid <span class="token operator">+</span><span class="token number">1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">return</span> start
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h2 id="herb-參考資料"><a href="#herb-參考資料" class="headerlink" title=" :herb: 參考資料"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 參考資料</font></h2><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/palindrome-number/">LeetCode-Palindrome Number</a></li>
-<li><a target="_blank" rel="noopener" href="https://hannahpun.gitbook.io/leetcode-note/math/9-palindrome-number">LeetCode Note</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-insert-position/">LeetCode - 35. Search Insert Position</a></li>
 </ul>
 <hr>
-<p>cover: Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/@sarahdorweiler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sarah Dorweiler</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/flower?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p>cover: Photo by <a target="_blank" rel="noopener" href="https://unsplash.com/photos/oppYzALtH88">Evie S.</a> on <a target="_blank" rel="noopener" href="https://unsplash.com/s/photos/plant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 
                 
             </div>
@@ -575,7 +510,7 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hobbyling.github.io/2022/04/15/leetcode-palinderomenumber/">https://hobbyling.github.io/2022/04/15/leetcode-palinderomenumber/</a>
+                    <a href="https://hobbyling.github.io/2022/06/14/leetcode-searchinsertposition/">https://hobbyling.github.io/2022/06/14/leetcode-searchinsertposition/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -617,12 +552,16 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                                     <span class="chip bg-color">JavaScript</span>
                                 </a>
                             
-                                <a href="/tags/Number/">
-                                    <span class="chip bg-color">Number</span>
+                                <a href="/tags/Array/">
+                                    <span class="chip bg-color">Array</span>
                                 </a>
                             
                                 <a href="/tags/LeetCode/">
                                     <span class="chip bg-color">LeetCode</span>
+                                </a>
+                            
+                                <a href="/tags/Binary-Search/">
+                                    <span class="chip bg-color">Binary Search</span>
                                 </a>
                             
                         </div>
@@ -663,40 +602,42 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/21/javascript-callbyvalueorreference/">
+                <a href="/2022/06/14/leetcode-searchinsertposition/">
                     <div class="card-image">
                         
-                        <img src="/./assets/Javascript-CallByValueOrReference/cover.jpg" class="responsive-img" alt="Call By Value &amp; Call By Reference">
+                        <img src="/./assets/Leetcode-SearchInsertPosition/cover.jpg" class="responsive-img" alt="LeetCode - Search Insert Position">
                         
-                        <span class="card-title">Call By Value &amp; Call By Reference</span>
+                        <span class="card-title">LeetCode - Search Insert Position</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaScript 中值傳遞的特性
+                            LeetCode 練習 - Search Insert Position
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
+                            <a href="/categories/LeetCode/" class="post-category">
+                                    LeetCode
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -704,12 +645,16 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/CallByValue/">
-                        <span class="chip bg-color">CallByValue</span>
+                    <a href="/tags/Array/">
+                        <span class="chip bg-color">Array</span>
                     </a>
                     
-                    <a href="/tags/CallByReference/">
-                        <span class="chip bg-color">CallByReference</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/Binary-Search/">
+                        <span class="chip bg-color">Binary Search</span>
                     </a>
                     
                 </div>
@@ -723,23 +668,23 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/04/03/leetcode-twosum/">
+                <a href="/2022/06/13/leetcode-guessnumberhigherorlower/">
                     <div class="card-image">
                         
-                        <img src="/./assets/Leetcode-twosum/cover.jpg" class="responsive-img" alt="LeetCode - Two sum">
+                        <img src="/./assets/Leetcode-GuessNumberHigherOrLower/cover.jpg" class="responsive-img" alt="Leetcode-Guess Number Higher Or Lower">
                         
-                        <span class="card-title">LeetCode - Two sum</span>
+                        <span class="card-title">Leetcode-Guess Number Higher Or Lower</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            LeetCode 練習 - Two sum
+                            LeetCode 練習 - Guess Number Higher Or Lower
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-13
                             </span>
                         <span class="publish-author">
                             
@@ -760,16 +705,12 @@ Math<span class="token punctuation">.</span><span class="token function">floor</
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
-                    <a href="/tags/Array/">
-                        <span class="chip bg-color">Array</span>
-                    </a>
-                    
-                    <a href="/tags/Object/">
-                        <span class="chip bg-color">Object</span>
-                    </a>
-                    
                     <a href="/tags/LeetCode/">
                         <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/Binary-Search/">
+                        <span class="chip bg-color">Binary Search</span>
                     </a>
                     
                 </div>
