@@ -6,9 +6,9 @@ tags:
   - LeetCode
 author: Hobby Lee
 img: ./assets/Leetcode-PalinderomeNumber/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 mathjax: true
 coverImg: ./assets/Leetcode-PalinderomeNumber/cover.jpg
 summary: LeetCode 練習 - Palinderome Number
