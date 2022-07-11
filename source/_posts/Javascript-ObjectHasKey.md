@@ -3,9 +3,9 @@ title: 判斷物件裡是否含有特定屬性
 date: 2022-03-20 02:04:35
 author: Hobby Lee
 img: ./assets/Javascript-ObjectHasKey/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascript-ObjectHasKey/cover.jpg
 summary: 判斷物件裡是否含有特定屬性
 categories: JavaScript

@@ -3,7 +3,7 @@ title: 取得物件的 key / value 值
 date: 2022-03-24 22:57:53
 author: Hobby Lee
 img: ./assets/Javascript-ObjectKeyAndValue/cover.jpg
-top: true
+top: false
 hide: false
 cover: true
 coverImg: ./assets/Javascript-ObjectKeyAndValue/cover.jpg
