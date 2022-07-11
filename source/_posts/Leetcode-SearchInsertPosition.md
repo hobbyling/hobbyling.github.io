@@ -7,7 +7,7 @@ tags:
   - LeetCode
 author: Hobby Lee
 img: ./assets/Leetcode-SearchInsertPosition/cover.jpg
-top: true
+top: false
 hide: false
 cover: false
 mathjax: true

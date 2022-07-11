@@ -6,7 +6,7 @@ tags:
   - LeetCode
 author: Hobby Lee
 img: ./assets/Leetcode-GuessNumberHigherOrLower/cover.jpg
-top: true
+top: false
 hide: false
 cover: false
 mathjax: true
