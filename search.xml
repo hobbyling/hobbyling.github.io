@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>浮點數陷阱</title>
+      <link href="/2022/07/22/javascript-floattrap/"/>
+      <url>/2022/07/22/javascript-floattrap/</url>
+      
+        <content type="html"><![CDATA[<p>在進行運算時，很理所當然的認為 10 - 9.99 = 0.01，但實作時卻一直發生錯誤。<br>console 出來後發現，與原本預想的結果不相同，因此花了一些時間了解其中的原因。</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">// 預期結果10 - 9.99 = 0.01<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">// 實際結果10 - 9.99 = 0.009999999999999787<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><hr><h2 id="herb-原因"><a href="#herb-原因" class="headerlink" title=" :herb: 原因"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 原因</font></h2><p>JavaScript 中的所有數字，包含整數及小數，都是 <code>Number</code> 型別，並遵循 IEEE 754 標準，使用 64 位固定長度表示。此做法的優點是歸一化處理整數和小數，節省存盤空間。</p><p>我們平常學習的運算方式，是使用十進制處理。<br>然而 JavaScript 是先使用二進制來計算後，再轉換成十進制。浮點數再轉乘二進制造成無窮迴圈，進而產生誤差。</p><h3 id="JavaScript-計算步驟"><a href="#JavaScript-計算步驟" class="headerlink" title="JavaScript 計算步驟"></a>JavaScript 計算步驟</h3><ul><li>先將數字轉成二進制</li></ul><pre class="line-numbers language-none"><code class="language-none">10 =&gt; 10109.99 =&gt; 1001.1111110101110000101000111101011100001010001111011<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><ul><li>運算</li></ul><pre class="line-numbers language-none"><code class="language-none">1010 - 1001.1111110101110000101000111101011100001010001111011 = 0.0000001010001111010111000010100011110101110000101<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><ul><li>轉成十進制</li></ul><pre class="line-numbers language-none"><code class="language-none">0.0000001010001111010111000010100011110101110000101 =&gt; 0.009999999999999787<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h2 id="herb-解法"><a href="#herb-解法" class="headerlink" title=" :herb: 解法"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 解法</font></h2><h3 id="1-先乘以-100，四捨五入後再除以-100"><a href="#1-先乘以-100，四捨五入後再除以-100" class="headerlink" title="1. 先乘以 100，四捨五入後再除以 100"></a>1. 先乘以 100，四捨五入後再除以 100</h3><p>需求為取至小數點後兩位時</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">let num = ((Number(10) * 100) - (Number(9.99) * 100)) / 100Math.floor(num * Math.pow(10, 2)) / Math.pow(10, 2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="2-toPrecision-12"><a href="#2-toPrecision-12" class="headerlink" title="2. toPrecision(12)"></a>2. toPrecision(12)</h3><p>12 能解決掉大部分 0001 和 0009 的問題</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">parseFloat(1.4000000000000001.toPrecision(12)) === 1.4  // True<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><hr><h2 id="herb-參考資料"><a href="#herb-參考資料" class="headerlink" title=" :herb: 參考資料"></a><font color="#ee6e73"> <span class="github-emoji"><span>🌿</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f33f.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 參考資料</font></h2><ul><li><a href="https://www.uj5u.com/qiye/246476.html">js 浮點數陷阱</a></li><li><a href="https://ad57475747.medium.com/javascript%E6%B5%AE%E9%BB%9E%E6%95%B8%E9%81%8B%E7%AE%97-1691eefe3ea7">JavaScript-Number的各種地雷–浮點數運算</a></li><li><a href="https://tso1158687.github.io/blog/2018/12/17/javascript-float-trap/">javascript浮點數的陷阱</a></li></ul><hr><p>Photo by <a href="https://unsplash.com/es/@evieshaffer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Evie S.</a> on <a href="https://unsplash.com/@evieshaffer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Float </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>LeetCode - Search Insert Position</title>
       <link href="/2022/06/14/leetcode-searchinsertposition/"/>
       <url>/2022/06/14/leetcode-searchinsertposition/</url>
@@ -24,9 +51,9 @@
             
             <tag> Array </tag>
             
-            <tag> LeetCode </tag>
-            
             <tag> Binary Search </tag>
+            
+            <tag> LeetCode </tag>
             
         </tags>
       
@@ -53,9 +80,9 @@
             
             <tag> JavaScript </tag>
             
-            <tag> LeetCode </tag>
-            
             <tag> Binary Search </tag>
+            
+            <tag> LeetCode </tag>
             
         </tags>
       
@@ -169,9 +196,9 @@
             
             <tag> JavaScript </tag>
             
-            <tag> Number </tag>
-            
             <tag> LeetCode </tag>
+            
+            <tag> Number </tag>
             
         </tags>
       
