@@ -4,9 +4,9 @@ tags:
   - JavaScript
 author: Hobby Lee
 img: ./assets/Javascropt-ConstLetVar/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascropt-ConstLetVar/cover.jpg
 summary: JavaScript 宣告變數 var, let, const 的差異
 categories: JavaScript

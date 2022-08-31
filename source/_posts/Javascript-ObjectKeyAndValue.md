@@ -5,7 +5,7 @@ author: Hobby Lee
 img: ./assets/Javascript-ObjectKeyAndValue/cover.jpg
 top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascript-ObjectKeyAndValue/cover.jpg
 summary: 取得物件的 key 或者 value 值
 categories: JavaScript
