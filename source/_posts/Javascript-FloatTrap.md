@@ -3,9 +3,9 @@ title: 浮點數陷阱
 date: 2022-07-22 09:52:35
 author: Hobby Lee
 img: ./assets/Javascript-FloatTrap/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascript-FloatTrap/cover.jpg
 summary: 浮點數運算時遇到的小坑
 categories: JavaScript

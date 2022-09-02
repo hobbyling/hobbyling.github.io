@@ -3,9 +3,9 @@ title: Call By Value & Call By Reference
 date: 2022-04-21 11:36:27
 author: Hobby Lee
 img: ./assets/Javascript-CallByValueOrReference/cover.jpg
-top: true
+top: false
 hide: false
-cover: true
+cover: false
 coverImg: ./assets/Javascript-CallByValueOrReference/cover.jpg
 summary: JavaScript 中值傳遞的特性
 categories: JavaScript

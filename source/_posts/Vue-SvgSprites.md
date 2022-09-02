@@ -11,7 +11,7 @@ hide: false
 cover: true
 coverImg: ./assets/Vue-SvgSprites/cover.jpg
 summary: 在 Vite + Vue3 中使用 svg-sprite-loader 管理 svg icon
-categories: JavaScript
+categories: Vue
 date: 2022-06-10 09:47:07
 ---
 

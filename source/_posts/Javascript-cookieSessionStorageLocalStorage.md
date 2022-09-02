@@ -3,7 +3,7 @@ title: Cookie, SessionStorage 與 LocalStorage 差異
 date: 2022-07-11 23:56:31
 author: Hobby Lee
 img: ./assets/Javascript-cookieSessionStorageLocalStorage/cover.jpg
-top: true
+top: false
 hide: false
 cover: true
 coverImg: ./assets/Javascript-cookieSessionStorageLocalStorage/cover.jpg
