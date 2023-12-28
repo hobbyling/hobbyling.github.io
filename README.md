@@ -1,10 +1,13 @@
 ## Quick Start
 
-### Create a new post
+### 建立新文章
 
 ```bash
-$ hexo new "My New Post"
+$ hexo new "檔案名稱"
 ```
+
+會建立一個 .md 檔案及一個資料夾
+將資料夾移至 assets 資料夾內，主要放置圖片等靜態檔案
 
 More info: [Writing](https://hexo.io/docs/writing.html)
 
@@ -14,6 +17,7 @@ More info: [Writing](https://hexo.io/docs/writing.html)
 $ hexo server
 ```
 
+本地端運行
 More info: [Server](https://hexo.io/docs/server.html)
 
 ### Generate static files
